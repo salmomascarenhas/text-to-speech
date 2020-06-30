@@ -1,9 +1,10 @@
 const express = require('express');
 const nunjucks = require('nunjucks');
 const bodyParser = require('body-parser');
-const gtts = require('@google-cloud/text-to-speech');
+const gtts = require('gtts.js').gTTS;
 
-const PORT = 3333;
+
+const PORT = 5000;
 
 const app = express();
 
@@ -19,16 +20,18 @@ nunjucks.configure('views', {
 
 app.get('/', (req, res) => {
     res.render('index');
-});
+})
 
 app.post('/', (req, res) => {
+
     const text = req.body.text;
     const speech = new gtts(text);
 
     speech
         .save('output.mp3')
-        .then(data => { res.download('output.mp3') })
-        .catch(err => console.log(err));
+        .then((data) => { res.download('output.mp3') })
+        .catch((err) => console.error(err));
+
 });
 
 app.listen(PORT, (req, res) => {
