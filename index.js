@@ -9,7 +9,7 @@ const app = express();
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(express.static(__dirname + 'public'));
+app.use(express.static(__dirname + '/public'));
 app.set('view engine', 'njk');
 
 nunjucks.configure('views', {
@@ -32,5 +32,5 @@ app.post('/', (req, res) => {
 });
 
 app.listen(PORT, (req, res) => {
-    console.log(`Server is running on http://locaolhost:${PORT}`);
-});
+    console.log(`Server is running on http://localhost:${PORT}`);
+}); 

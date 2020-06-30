@@ -4,7 +4,7 @@
   "description": "🗣️ Convert a text to speech using the 'Google CLOUD TEXT-TO-SPEECH'. Made in nodeJS.",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon ./index.js",
+    "start": "nodemon nodemon -e js,pug,njk,js,css,json ./index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
