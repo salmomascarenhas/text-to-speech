@@ -1,7 +1,7 @@
 const express = require('express');
 const nunjucks = require('nunjucks');
 const bodyParser = require('body-parser');
-const gtts = require('@google-cloud/text-to-speech');
+const gtts = require('gtts.js').gTTS;
 
 
 
