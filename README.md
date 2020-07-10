@@ -19,4 +19,4 @@ $ npm install
 $ npm start
 ```
 
-Open localhost on PORT 5000 to see the apliccation.
+Open localhost on PORT 5000 to see the application.
